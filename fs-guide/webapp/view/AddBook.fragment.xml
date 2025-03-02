@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="addBookDialog" title="Aggiungi Libro" stretch="false">
+        <content>
+            <VBox>
+                <Input id="inputTitle999" placeholder="Titolo del libro"/>
+                <Input id="inputStock999" placeholder="Stock" type="Number"/>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Salva" press=".onSaveBook"/>
+        </beginButton>
+        <endButton>
+            <Button text="Annulla" press=".onCloseDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

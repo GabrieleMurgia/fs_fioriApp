@@ -1,0 +1,9 @@
+<mvc:View controllerName="fsguide.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page2" title="{i18n>title}">
+    <Button text="Conferma" type="Accept" press="onConfirm"/>
+    </Page>
+
+</mvc:View>

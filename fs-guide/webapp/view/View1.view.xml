@@ -1,0 +1,42 @@
+<mvc:View controllerName="fsguide.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout.form"> <!-- ✅ Aggiunto il namespace corretto -->
+
+    <Page title="Gestione Libri" id="1">
+        <content>
+
+            <!-- ✅ Form corretto per inserire un nuovo libro -->
+            <layout:SimpleForm id="bookForm" editable="true">
+                <Label text="Titolo"/>
+                <Input id="inputTitle"/>
+                <Label text="Stock"/>
+                <Input id="inputStock" type="Number"/>
+                <Button text="Salva" press="onSaveBook"/>
+                <Button text="Dialog" press=".onOpenDialog"/>
+            </layout:SimpleForm>
+
+            <!-- Bottone per aggiungere un libro -->
+            <Button id="2" text="Aggiungi Libro" press="onAddBook"/>
+            <Button text="Filtra Libri Disponibili" press="onFilterBooks"/>
+
+            <!-- Tabella per mostrare i libri -->
+            <Table id="booksTable" items="{/Books}">
+                <columns>
+                    <Column id="4"><Text text="Titolo"/></Column>
+                    <Column><Text text="Stock"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{title}"/>
+                            <Text text="{stock}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+
+</mvc:View>
